@@ -1,6 +1,21 @@
-# 🌍 Trip Planner Assistant
+## Problem
 
-A multi-agent AI system that creates personalized travel itineraries with intelligent task orchestration and real-time web search capabilities. Built with CrewAI, this application leverages specialized AI agents to deliver comprehensive trip planning.
+Planning multi-day trips requires aggregating information across destinations, attractions, budgets, and time constraints. Manual planning is time-consuming and often results in unrealistic or incomplete itineraries.
+
+## Solution
+
+This project implements a **multi-agent AI system** that decomposes trip planning into specialized reasoning tasks and coordinates them using intelligent agent orchestration.  
+The system combines **LLM-based reasoning** with **real-time web search** to generate constraint-aware, personalized travel itineraries.
+
+The focus of this project is on **agent collaboration, task decomposition, and orchestration**, rather than single-prompt itinerary generation.
+
+## Key Design Decisions & Trade-offs
+
+- **Multi-Agent over Single LLM Prompt**: Improves modularity and allows independent reasoning for destinations, attractions, and scheduling.
+- **Real-Time Web Search**: Ensures recommendations remain relevant and up-to-date.
+- **Local LLM via Ollama**: Reduces inference cost and improves iteration speed, with acceptable trade-offs in model accuracy.
+- **Sequential Task Execution**: Prevents conflicting recommendations and reduces redundant web queries.
+
 
 ## ✨ Features
 
